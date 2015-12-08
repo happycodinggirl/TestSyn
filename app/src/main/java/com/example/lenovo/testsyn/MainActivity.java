@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             super.run();
-            synchronized (lockObject) {
+            synchronized (MyThread.this) {
                 num++;
 
                 Log.v("TAG", "- thread " + Thread.currentThread().getName() + " print  num is " + num);
